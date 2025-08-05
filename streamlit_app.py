@@ -109,12 +109,12 @@ df = load_data()
 
 # Set up input widgets
 st.logo(image="images/streamlit-logo-primary-colormark-lighttext.png", 
-        icon_image="images/streamlit-mark-color.png")
+         icon_image="images/streamlit-mark-color.png")
 
 with st.sidebar:
     st.title("YouTube Channel Dashboard")
     st.header("⚙️ Settings")
-    
+    # st.image("images/streamlit-logo-primary-colormark-lighttext.png", width=200)
     max_date = df['DATE'].max().date()
     default_start_date = max_date - timedelta(days=365)  # Show a year by default
     default_end_date = max_date
